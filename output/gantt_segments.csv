@@ -4,22 +4,3 @@ FCFS,2,P2,10,15,5
 FCFS,3,P3,15,17,2
 FCFS,4,P4,17,23,6
 FCFS,5,P5,23,26,3
-SJF (non-preemptive),1,P1,0,10,10
-SJF (non-preemptive),2,P3,10,12,2
-SJF (non-preemptive),3,P5,12,15,3
-SJF (non-preemptive),4,P2,15,20,5
-SJF (non-preemptive),5,P4,20,26,6
-Priority (1 = highest),1,P1,0,10,10
-Priority (1 = highest),2,P2,10,15,5
-Priority (1 = highest),3,P4,15,21,6
-Priority (1 = highest),4,P3,21,23,2
-Priority (1 = highest),5,P5,23,26,3
-Round Robin (q=4),1,P1,0,4,4
-Round Robin (q=4),2,P2,4,8,4
-Round Robin (q=4),3,P3,8,10,2
-Round Robin (q=4),4,P1,10,14,4
-Round Robin (q=4),5,P4,14,18,4
-Round Robin (q=4),6,P5,18,21,3
-Round Robin (q=4),7,P2,21,22,1
-Round Robin (q=4),8,P1,22,24,2
-Round Robin (q=4),9,P4,24,26,2
