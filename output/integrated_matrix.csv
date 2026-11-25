@@ -1,0 +1,13 @@
+Scheduler,Replacement,Refs,Faults,Hits,HitRatio,SchedAvgWT,SchedAvgTAT
+FCFS,FIFO,26,14,12,0.4615,9.6,14.8
+FCFS,LRU,26,14,12,0.4615,9.6,14.8
+FCFS,Optimal,26,14,12,0.4615,9.6,14.8
+SJF (non-preemptive),FIFO,26,14,12,0.4615,8.0,13.2
+SJF (non-preemptive),LRU,26,14,12,0.4615,8.0,13.2
+SJF (non-preemptive),Optimal,26,14,12,0.4615,8.0,13.2
+Priority (1 = highest),FIFO,26,14,12,0.4615,10.4,15.6
+Priority (1 = highest),LRU,26,14,12,0.4615,10.4,15.6
+Priority (1 = highest),Optimal,26,14,12,0.4615,10.4,15.6
+Round Robin (q=4),FIFO,26,22,4,0.1538,12.0,17.2
+Round Robin (q=4),LRU,26,22,4,0.1538,12.0,17.2
+Round Robin (q=4),Optimal,26,17,9,0.3462,12.0,17.2

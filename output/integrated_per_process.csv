@@ -1,0 +1,61 @@
+Scheduler,Replacement,PID,Faults
+FCFS,FIFO,P1,3
+FCFS,FIFO,P2,3
+FCFS,FIFO,P3,2
+FCFS,FIFO,P4,3
+FCFS,FIFO,P5,3
+FCFS,LRU,P1,3
+FCFS,LRU,P2,3
+FCFS,LRU,P3,2
+FCFS,LRU,P4,3
+FCFS,LRU,P5,3
+FCFS,Optimal,P1,3
+FCFS,Optimal,P2,3
+FCFS,Optimal,P3,2
+FCFS,Optimal,P4,3
+FCFS,Optimal,P5,3
+SJF (non-preemptive),FIFO,P1,3
+SJF (non-preemptive),FIFO,P2,3
+SJF (non-preemptive),FIFO,P3,2
+SJF (non-preemptive),FIFO,P4,3
+SJF (non-preemptive),FIFO,P5,3
+SJF (non-preemptive),LRU,P1,3
+SJF (non-preemptive),LRU,P2,3
+SJF (non-preemptive),LRU,P3,2
+SJF (non-preemptive),LRU,P4,3
+SJF (non-preemptive),LRU,P5,3
+SJF (non-preemptive),Optimal,P1,3
+SJF (non-preemptive),Optimal,P2,3
+SJF (non-preemptive),Optimal,P3,2
+SJF (non-preemptive),Optimal,P4,3
+SJF (non-preemptive),Optimal,P5,3
+Priority (1 = highest),FIFO,P1,3
+Priority (1 = highest),FIFO,P2,3
+Priority (1 = highest),FIFO,P3,2
+Priority (1 = highest),FIFO,P4,3
+Priority (1 = highest),FIFO,P5,3
+Priority (1 = highest),LRU,P1,3
+Priority (1 = highest),LRU,P2,3
+Priority (1 = highest),LRU,P3,2
+Priority (1 = highest),LRU,P4,3
+Priority (1 = highest),LRU,P5,3
+Priority (1 = highest),Optimal,P1,3
+Priority (1 = highest),Optimal,P2,3
+Priority (1 = highest),Optimal,P3,2
+Priority (1 = highest),Optimal,P4,3
+Priority (1 = highest),Optimal,P5,3
+Round Robin (q=4),FIFO,P1,8
+Round Robin (q=4),FIFO,P2,4
+Round Robin (q=4),FIFO,P3,2
+Round Robin (q=4),FIFO,P4,5
+Round Robin (q=4),FIFO,P5,3
+Round Robin (q=4),LRU,P1,8
+Round Robin (q=4),LRU,P2,4
+Round Robin (q=4),LRU,P3,2
+Round Robin (q=4),LRU,P4,5
+Round Robin (q=4),LRU,P5,3
+Round Robin (q=4),Optimal,P1,4
+Round Robin (q=4),Optimal,P2,4
+Round Robin (q=4),Optimal,P3,2
+Round Robin (q=4),Optimal,P4,4
+Round Robin (q=4),Optimal,P5,3

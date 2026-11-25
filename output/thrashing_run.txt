@@ -1,0 +1,27 @@
+
+==========================================================================
+SECTION 4 -- THRASHING ANALYSIS (faults vs frame count)
+==========================================================================
+Reference string: 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+Distinct pages   : 6
+Frames swept     : 1 to 10
+
+Frames       FIFO      LRU  Optimal
+-----------------------------------
+1              20       20       20
+2              15       17       13
+3              15       12        9
+4              10        8        8
+5               9        7        7
+6               6        6        6
+7               6        6        6
+8               6        6        6
+9               6        6        6
+10              6        6        6
+
+Knee analysis (smallest frame count reaching 90% of the maximum fault reduction):
+  FIFO     -> 6 frame(s)
+  LRU      -> 5 frame(s)
+  Optimal  -> 5 frame(s)
+
+No Belady's anomaly in this sweep: fault counts are monotonically non-increasing for all three algorithms.

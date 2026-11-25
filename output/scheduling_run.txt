@@ -1,0 +1,129 @@
+
+==========================================================================
+SECTION 1 -- CPU SCHEDULING (4 algorithms, sample workload)
+==========================================================================
+Workload (textbook 5-process set):
+PID    Arrival  Burst Priority  Start  Compl.   TAT    WT    RT
+---------------------------------------------------------------
+P1           0     10        3      0      10    10     0     0
+P2           1      5        1     10      15    14     9     9
+P3           3      2        4     15      17    14    12    12
+P4           5      6        2     17      23    18    12    12
+P5           8      3        5     23      26    18    15    15
+
+Time quantum for Round Robin: 4
+
+==========================================================================
+ALGORITHM : FCFS
+==========================================================================
+PID    Arrival  Burst Priority  Start  Compl.   TAT    WT    RT
+---------------------------------------------------------------
+P1           0     10        3      0      10    10     0     0
+P2           1      5        1     10      15    14     9     9
+P3           3      2        4     15      17    14    12    12
+P4           5      6        2     17      23    18    12    12
+P5           8      3        5     23      26    18    15    15
+
+Gantt chart (1 character ~ 0.42 time units):
+11111111111111111111111122222222222233333444444444444445555555
+0                       10          15   17            23     26
+Legend: 1=P1   2=P2   3=P3   4=P4   5=P5   -=idle
+
+Average Waiting Time    :     9.60
+Average Turnaround Time :    14.80
+Average Response Time   :     9.60
+CPU Utilization         :  100.00 %
+Throughput              :   0.192 processes / time unit
+Total time (makespan)   :       26
+CPU dispatches          :        5
+Preemptions             :        0
+==========================================================================
+
+==========================================================================
+ALGORITHM : SJF (non-preemptive)
+==========================================================================
+PID    Arrival  Burst Priority  Start  Compl.   TAT    WT    RT
+---------------------------------------------------------------
+P1           0     10        3      0      10    10     0     0
+P2           1      5        1     15      20    19    14    14
+P3           3      2        4     10      12     9     7     7
+P4           5      6        2     20      26    21    15    15
+P5           8      3        5     12      15     7     4     4
+
+Gantt chart (1 character ~ 0.42 time units):
+11111111111111111111111133333555555522222222222244444444444444
+0                       10   12     15          20            26
+Legend: 1=P1   2=P2   3=P3   4=P4   5=P5   -=idle
+
+Average Waiting Time    :     8.00
+Average Turnaround Time :    13.20
+Average Response Time   :     8.00
+CPU Utilization         :  100.00 %
+Throughput              :   0.192 processes / time unit
+Total time (makespan)   :       26
+CPU dispatches          :        5
+Preemptions             :        0
+==========================================================================
+
+==========================================================================
+ALGORITHM : Priority (1 = highest)
+==========================================================================
+PID    Arrival  Burst Priority  Start  Compl.   TAT    WT    RT
+---------------------------------------------------------------
+P1           0     10        3      0      10    10     0     0
+P2           1      5        1     10      15    14     9     9
+P3           3      2        4     21      23    20    18    18
+P4           5      6        2     15      21    16    10    10
+P5           8      3        5     23      26    18    15    15
+
+Gantt chart (1 character ~ 0.42 time units):
+11111111111111111111111122222222222244444444444444333335555555
+0                       10          15            21   23     26
+Legend: 1=P1   2=P2   3=P3   4=P4   5=P5   -=idle
+
+Average Waiting Time    :    10.40
+Average Turnaround Time :    15.60
+Average Response Time   :    10.40
+CPU Utilization         :  100.00 %
+Throughput              :   0.192 processes / time unit
+Total time (makespan)   :       26
+CPU dispatches          :        5
+Preemptions             :        0
+==========================================================================
+
+==========================================================================
+ALGORITHM : Round Robin (q=4)
+==========================================================================
+PID    Arrival  Burst Priority  Start  Compl.   TAT    WT    RT
+---------------------------------------------------------------
+P1           0     10        3      0      24    24    14     0
+P2           1      5        1      4      22    21    16     3
+P3           3      2        4      8      10     7     5     5
+P4           5      6        2     14      26    21    15     9
+P5           8      3        5     18      21    13    10    10
+
+Gantt chart (1 character ~ 0.42 time units):
+1111111111222222222233333111111111144444444445555555221111144444
+0         4         8    10        14        18     2122   24   26
+Legend: 1=P1   2=P2   3=P3   4=P4   5=P5   -=idle
+
+Average Waiting Time    :    12.00
+Average Turnaround Time :    17.20
+Average Response Time   :     5.40
+CPU Utilization         :  100.00 %
+Throughput              :   0.192 processes / time unit
+Total time (makespan)   :       26
+CPU dispatches          :        9
+Preemptions             :        4
+==========================================================================
+
+SIDE-BY-SIDE COMPARISON
+--------------------------------------------------------------------------
+Algorithm                    Avg WT  Avg TAT   Avg RT   CPU %  Thruput Preempt
+------------------------------------------------------------------------------
+FCFS                           9.60    14.80     9.60   100.0    0.192       0
+SJF (non-preemptive)           8.00    13.20     8.00   100.0    0.192       0 *
+Priority (1 = highest)        10.40    15.60    10.40   100.0    0.192       0
+Round Robin (q=4)             12.00    17.20     5.40   100.0    0.192       4
+------------------------------------------------------------------------------
+* = lowest average waiting time on this workload

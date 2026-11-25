@@ -1,0 +1,53 @@
+
+==========================================================================
+SECTION 3 -- INTEGRATED SIMULATION (CPU scheduling linked to virtual memory)
+==========================================================================
+Every process owns a cyclic working set of 3 pages; each time unit
+on the CPU it references the next page of that set.  The Gantt chart
+of each scheduler therefore generates a different reference string.
+Frames allocated: 4    Round Robin quantum: 4
+
+Page assignment (working sets):
+  P1 -> pages 1, 2, 3
+  P2 -> pages 4, 5, 6
+  P3 -> pages 7, 8, 9
+  P4 -> pages 10, 11, 12
+  P5 -> pages 13, 14, 15
+
+INTEGRATED PERFORMANCE MATRIX (scheduler x replacement)
+--------------------------------------------------------------------------
+Scheduler                 Memory     Faults  Hits   Hit %   Avg WT*
+-------------------------------------------------------------------
+FCFS                      FIFO           14    12    46.2      9.60
+FCFS                      LRU            14    12    46.2      9.60
+FCFS                      Optimal        14    12    46.2      9.60
+SJF (non-preemptive)      FIFO           14    12    46.2      8.00
+SJF (non-preemptive)      LRU            14    12    46.2      8.00
+SJF (non-preemptive)      Optimal        14    12    46.2      8.00
+Priority (1 = highest)    FIFO           14    12    46.2     10.40
+Priority (1 = highest)    LRU            14    12    46.2     10.40
+Priority (1 = highest)    Optimal        14    12    46.2     10.40
+Round Robin (q=4)         FIFO           22     4    15.4     12.00
+Round Robin (q=4)         LRU            22     4    15.4     12.00
+Round Robin (q=4)         Optimal        17     9    34.6     12.00
+-------------------------------------------------------------------
+* Avg WT = waiting time of the CPU scheduler itself
+
+Best combination : FCFS + FIFO -> 14 faults
+Worst combination: Round Robin (q=4) + LRU -> 22 faults
+
+FIFO: FCFS causes 14 faults, RR(q=4) causes 22 -- interleaving costs 8 extra faults (+57%).
+
+LRU: FCFS causes 14 faults, RR(q=4) causes 22 -- interleaving costs 8 extra faults (+57%).
+
+Optimal: FCFS causes 14 faults, RR(q=4) causes 17 -- interleaving costs 3 extra faults (+21%).
+
+PER-PROCESS PAGE FAULTS (Round Robin scheduler)
+--------------------------------------------------------------------------
+PID           FIFO       LRU   Optimal
+--------------------------------------
+P1               8         8         4
+P2               4         4         4
+P3               2         2         2
+P4               5         5         4
+P5               3         3         3

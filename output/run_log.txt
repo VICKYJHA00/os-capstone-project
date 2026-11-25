@@ -1,0 +1,33 @@
+EVIDENCE PACK -- Integrated CPU Scheduling + Virtual Memory Simulator
+Generated : 2026-11-25T07:15:10
+Python    : 3.12.16
+Platform  : Linux-5.10.134-013.15.kangaroo.al8.x86_64-x86_64-with-glibc2.41
+Files     : 27
+
+  gantt_fcfs.png
+  gantt_sjf.png
+  gantt_priority.png
+  gantt_rr.png
+  scheduling_comparison.png
+  scheduling_detail.csv
+  scheduling_summary.csv
+  gantt_segments.csv
+  scheduling_run.txt
+  page_faults_comparison_short.png
+  page_replacement_summary.csv
+  page_faults_comparison_long.png
+  page_trace_short_fifo.csv
+  page_trace_short_lru.csv
+  page_trace_short_optimal.csv
+  page_trace_long_fifo.csv
+  page_trace_long_lru.csv
+  page_trace_long_optimal.csv
+  memory_run.txt
+  integrated_heatmap.png
+  integrated_matrix.csv
+  integrated_per_process.csv
+  integrated_run.txt
+  thrashing_curve.png
+  thrashing.csv
+  thrashing_run.txt
+  test_results.txt

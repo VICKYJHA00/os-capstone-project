@@ -1,0 +1,3 @@
+# Only third-party dependency: chart rendering.
+# The simulator itself runs on the Python standard library alone.
+matplotlib>=3.4

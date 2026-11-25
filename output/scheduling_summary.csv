@@ -1,0 +1,5 @@
+Algorithm,AvgWaiting,AvgTurnaround,AvgResponse,Makespan,CPUUtil%,Throughput,Dispatches,Preemptions
+FCFS,9.6,14.8,9.6,26,100.0,0.1923,5,0
+SJF (non-preemptive),8.0,13.2,8.0,26,100.0,0.1923,5,0
+Priority (1 = highest),10.4,15.6,10.4,26,100.0,0.1923,5,0
+Round Robin (q=4),12.0,17.2,5.4,26,100.0,0.1923,9,4
